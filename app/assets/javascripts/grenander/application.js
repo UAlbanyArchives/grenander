@@ -13,5 +13,5 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
-//= require headerAffix
-//= require searchHandler
+//= require grenander/headerAffix
+//= require grenander/searchHandler
