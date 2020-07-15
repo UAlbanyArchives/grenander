@@ -4,6 +4,7 @@ window.addEventListener('load', function() {
     var allSearchURL = "https://archives.albany.edu/search";
     var arclightSearchURL = "https://archives.albany.edu/description/catalog";
     var hyraxSearchURL = "https://archives.albany.edu/catalog/";
+    var historySearchURL = "https://archives.albany.edu/history/";
 
     //query selector for search form
     var searchForm = document.getElementsByClassName('allSearch');
@@ -15,6 +16,7 @@ window.addEventListener('load', function() {
     var allSearchBtn = document.getElementById('allSearch')
     var arclightBtn = document.getElementById('arclightSearch');
     var hyraxBtn = document.getElementById('hyraxSearch');
+    var historyBtn = document.getElementById('historySearch');
 
 
     //
@@ -43,6 +45,14 @@ window.addEventListener('load', function() {
         searchPlaceholder.placeholder = "Search only online digital content...";
         currentSelection.textContent = "Digital Selections";
     });
+
+    //Search UA History
+    hyraxBtn.addEventListener('click', function() {
+        searchForm[0].action = hyraxSearchURL;
+        searchPlaceholder.placeholder = "Search UAlbany's history...";
+        currentSelection.textContent = "UAlbany History";
+    });
+
 
 
 }, false);

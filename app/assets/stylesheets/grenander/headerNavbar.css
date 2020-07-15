@@ -817,3 +817,10 @@ nav #search.btn-primary.active {
 	display: none;
 }
 
+.footRight {
+ text-align:left
+}
+.footRight img {
+ max-width:300px;
+ margin-bottom:15px
+}
