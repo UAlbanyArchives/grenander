@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.version     = Grenander::VERSION
   spec.authors     = ["Gregory Wiedeman"]
   spec.email       = ["gregory.wiedeman1@gmail.com"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of Grenander."
-  spec.description = "TODO: Description of Grenander."
+  spec.homepage    = "https://archives.albany.edu"
+  spec.summary     = "Shared menu and styling for Grenander rails apps."
+  spec.description = "Shared menu and styling for Grenander rails apps."
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
