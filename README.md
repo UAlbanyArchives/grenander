@@ -14,13 +14,19 @@ gem 'grenander', git: 'https://github.com/UAlbanyArchives/grenander'
 2. Add templates to `app/views/layouts/blacklight/base.html.erb`
 
 ```
+wget -O app/views/layouts/blacklight/base.html.erb https://github.com/projectblacklight/blacklight/blob/master/app/views/layouts/blacklight/base.html.erb
+```
+
+
+```
 <body class="<%= render_body_class %>">
     <nav id="skip-link" role="navigation" aria-label="<%= t('blacklight.skip_links.label') %>">
       <%= link_to t('blacklight.skip_links.search_field'), '#search_field', class: 'element-invisible element-focusable rounded-bottom py-2 px-3', data: { turbolinks: 'false' } %>
       <%= link_to t('blacklight.skip_links.main_content'), '#main-container', class: 'element-invisible element-focusable rounded-bottom py-2 px-3', data: { turbolinks: 'false' } %>
       <%= content_for(:skip_links) %>
     </nav>
-    Here --> <%# render partial: 'shared/header_navbar' %>
+    
+    Remove/Comment --> <%= render partial: 'shared/header_navbar' %>
     Here --> <%= render partial: 'layouts/grenander/header_navbar' %>
     Here --> <%= render partial: 'layouts/grenander/search_subnav' %>
 
@@ -34,6 +40,7 @@ gem 'grenander', git: 'https://github.com/UAlbanyArchives/grenander'
     </div>
   </main>
 
+  	Remove/Comment -- > <%= render partial: 'shared/footer' %>
     Here --> <%= render partial: 'layouts/grenander/footer' %>
     Here --> <%= render partial: 'shared/modal' %>
   </body>
@@ -55,3 +62,9 @@ gem 'grenander', git: 'https://github.com/UAlbanyArchives/grenander'
 ```
 
 5. Copy over 404.html, 422.html, 500.html to `public`
+
+```
+wget -O public/404.html https://raw.githubusercontent.com/UAlbanyArchives/grenander/master/public/404.html
+wget -O public/422.html https://raw.githubusercontent.com/UAlbanyArchives/grenander/master/public/422.html
+wget -O public/500.html https://raw.githubusercontent.com/UAlbanyArchives/grenander/master/public/500.html
+```
