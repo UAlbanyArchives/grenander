@@ -18,7 +18,7 @@ body {
 }
 
 
-.navbar-dark .navbar-nav .nav-link{
+.navbar-dark .navbar-nav .nav-link {
 	color: #EBE6F0;
 	text-decoration: none;
 	font: 11pt "Roboto", Helvetica, Arial, sans-serif;
@@ -26,16 +26,22 @@ body {
 	padding-bottom: 15px;
 	width: 100% !important;
 	display: block;
+	padding-left: 0.5rem;
 }
 
-
-.navbar-dark .navbar-nav li ul li a {
+.navbar-dark .dropdown-menu a {
 	color: #403a60;
 	text-decoration: none;
 	font: 11pt "Roboto", Helvetica, Arial, sans-serif;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	/*padding-top: 10px;*/
+	/*padding-bottom: 10px;*/
 	vertical-align: middle;
+}
+
+.navbar-dark .dropdown-menu .dropdown-divider {
+	border-color: #46166B;
+	/*margin-top: 3px;*/
+	/*margin-bottom: 3px;*/
 }
 
 .navbar-dark .navbar-nav > .show > a, .navbar-dark .navbar-nav > .show > a:focus, .navbar-dark .navbar-nav > .show > a:hover {
@@ -43,7 +49,7 @@ body {
 	color: #403a60;
 }
 
-.nav li a {
+.navbar-dark li a {
 	padding: 10px 10px;
 }
 
@@ -106,57 +112,4 @@ body {
 	.navbar-logo {
 		flex: 0 0 500px;
 	}
-}
-
-/* main container */
-
-#main-container {
-	padding-top: 1rem;
-}
-
-
-/* Search */
-
-.search-sources li.nav-item a {
-	color: #46166B;
-}
-
-.search-sources li.nav-item a:hover {
-	color: #EBE6F0;
-	background: #006c68;
-}
-
-.search-sources li.nav-item a.active {
-	background: #46166B url(/assets/grenander/index.png) no-repeat center right;
-	border-left: 5px solid #006c68;
-	border-radius: 0px;
-}
-
-.search-source .container-fluid {
-	background-color: #642a90;
-	min-height: 125px;
-	padding: 1.25rem 1rem 1.25rem 1.25rem;
-	z-index: 9;
-	top: 0px;
-	transition: all ease .25s;
-	border-radius: calc(0.5rem - 1px);
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	background-image: url('https://archives.albany.edu/static/web/images/search-lighten10.png');
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: top left;
-}
-
-.search-source h2.search-intro {
-	display: inline-block;
-	color: #ffffff;
-	text-align: center;
-	margin-right: 25px;
-	margin-left: 20px;
-	font-weight: 300;
-	text-shadow: 3px 3px 5px #46166b;
-}
-
-.search-source .container-fluid form {
-	flex-grow: 1;
 }

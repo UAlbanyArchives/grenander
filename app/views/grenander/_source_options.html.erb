@@ -1,22 +1,49 @@
 <h2 class="facets-heading">Search</h2>
 
-<ul class="nav nav-pills flex-column search-sources">
+<ul id="search-sources-menu" class="nav nav-pills flex-column search-sources">
   <li class="nav-item">
-    <a class="nav-link" href="#">Everything</a>
+    <a class="nav-link search active" href="#">Everything</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">All Collections</a>
+    <a class="nav-link description" href="#">All Collections</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Online Content</a>
+    <a class="nav-link catalog" href="#">Online Content</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">UAlbany History</a>
+    <a class="nav-link history" href="#">UAlbany History</a>
   </li>
-  <li class="nav-item selected">
-    <a class="nav-link active" href="#">Mathes Childrens Literature</a>
+  <li class="nav-item">
+    <a class="nav-link mathes" href="#">Mathes Childrens Literature</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Rare Books</a>
   </li>
 </ul>
+<div class="more-sources">
+  <a class="btn btn-info btn-sm collapsed" data-toggle="collapse" href="#collapseSources" role="button" aria-expanded="false" aria-controls="collapseSources">
+    More
+  </a>
+  <div class="collapse" id="collapseSources">
+    <ul class="nav nav-pills flex-column">
+      <li class="nav-item">
+        <a class="nav-link search" href="#">Everything</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link description" href="#">All Collections</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link catalog" href="#">Online Content</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link history" href="#">UAlbany History</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link mathes" href="#">Mathes Childrens Literature</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Rare Books</a>
+      </li>
+    </ul>
+  </div>
+</div>
