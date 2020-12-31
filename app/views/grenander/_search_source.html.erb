@@ -2,7 +2,7 @@
 	<div class="navbar navbar-expand-sm search-source flex-fill">
 		<div class="<%= container_classes %>">
 			<h2 class="search-intro"><%= source_name %></h2>
-			<% if render_search_bar %>
+			<% defined? render_search_bar %>
 				<%# For blacklight  %>
 				<% render_search_bar  %>
 			<% else %>
