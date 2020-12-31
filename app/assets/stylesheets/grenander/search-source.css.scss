@@ -59,8 +59,13 @@
 	background-position: top left;
 }
 
-#main-container .row section .d-flex {
+/*#main-container .row section .d-flex {
 	height: 100%;
+}*/
+
+.search-source .search-query-form input {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 
 .search-source h2.search-intro {

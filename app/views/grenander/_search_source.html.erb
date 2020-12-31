@@ -4,7 +4,7 @@
 			<h2 class="search-intro"><%= source_name %></h2>
 			<% if defined? render_search_bar %>
 				<%# For blacklight  %>
-				<% render_search_bar %>
+				<%= render_search_bar %>
 			<% else %>
 				<%# For quicksearch  %>
 				<%= render partial: 'grenander/search_bar' %>

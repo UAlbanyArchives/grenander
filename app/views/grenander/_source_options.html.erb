@@ -1,8 +1,22 @@
 <h2 class="facets-heading">Search</h2>
 
+
+<% searchURI = URI.join(root_url, "search") %>
+<% arclightURI = URI.join(root_url, "description") %>
+<% hyraxURI = URI.join(root_url, "catalog") %>
+<% historyURI = URI.join(root_url, "history") %>
+<% mathesURI = URI.join(root_url, "mathes") %>
+
+<% searchURI.query = request.query_parameters.to_query %>
+<% arclightURI.query = request.query_parameters.to_query %>
+<% hyraxURI.query = request.query_parameters.to_query %>
+<% historyURI.query = request.query_parameters.to_query %>
+<% mathesURI.query = request.query_parameters.to_query %>
+
+
 <ul id="search-sources-menu" class="nav nav-pills flex-column search-sources">
   <li class="nav-item">
-    <a class="nav-link search active" href="#">Everything</a>
+    <a class="nav-link search active" href="<%= searchURI.to_s %>">Everything</a>
   </li>
   <li class="nav-item">
     <a class="nav-link description" href="#">All Collections</a>
@@ -14,7 +28,7 @@
     <a class="nav-link history" href="#">UAlbany History</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link mathes" href="#">Mathes Childrens Literature</a>
+    <a class="nav-link mathes" href="<%= mathesURI.to_s %>">Mathes Childrens Literature</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Rare Books</a>
