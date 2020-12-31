@@ -15,3 +15,9 @@ gemspec
 # gem 'byebug', group: [:development, :test]
 
 gem "font-awesome-rails"
+gem "bootstrap", '>= 4.3.1'
+gem 'font-awesome-rails'
+gem 'jquery-rails'
+gem 'font-awesome-sass'
+gem 'd3-rails'
+gem 'lodash-rails'

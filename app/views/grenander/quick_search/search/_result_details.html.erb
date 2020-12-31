@@ -1,0 +1,92 @@
+<div class="result-details">
+
+<% unless result["mobile_link"] %>
+    <h4 class='card-title'>
+        <%= render partial: "/quick_search/search/result_title", locals: { link: result['link'], title: result['title'], date: result['date'] } %>
+        <% if result['availability'] %>
+            <% if result["availability"] == "online content" %>
+                <small class='badge badge-success'><%= result['availability'] %></small>
+            <% end %>
+        <% end %>
+    </h4>
+<% else %>
+    <h4 class='title show-for-medium-up'>
+        <%= render partial: "/quick_search/search/result_title", locals: { link: result['link'], title: result['title'], date: result['date'] } %>
+    </h4>
+    <h4 class='title show-for-small-only'>
+        <%= render partial: "/quick_search/search/result_title", locals: { link: result['mobile_link'], title: result['title'], date: result['date'] } %>
+    </h4>
+<% end %>
+
+<% if result.description %>
+    <p class='description card-text'><%=  truncate(result["description"].html_safe, length: 200) %></p>
+<% end %>
+
+<% if result.author %>
+    <div class="row field">
+    <div class="col-sm-3 field-name">Author</div>
+    <div class="col-sm-9"><%= result.author.html_safe %></div>
+    </div>
+<% end %>
+<% if result.illustrator %>
+    <div class="row field">
+    <div class="col-sm-3 field-name">Illustrator</div>
+    <div class="col-sm-9"><%= result.illustrator.html_safe %></div>
+    </div>
+<% end %>
+<% if result.translator %>
+    <div class="row field">
+    <div class="col-sm-3 field-name">Translator</div>
+    <div class="col-sm-9"><%= result.translator.html_safe %></div>
+    </div>
+<% end %>
+<% if result.contributor %>
+    <div class="row field">
+    <div class="col-sm-3 field-name">Contributor</div>
+    <div class="col-sm-9"><%= result.contributor.html_safe %></div>
+    </div>
+<% end %>
+
+<% if result.citation %>
+    <p class="citation card-text">
+    <%= render partial: '/quick_search/search/citation', locals: {:result => result} %>
+    </p>
+<% end %>
+
+<% if result["format"]%>
+    <p class='format card-text'><%= result["format"] %>
+<% end %>
+
+<% if result['fulltext'] %>
+    <%= link_to result["link"], {:class => ''} do %>
+        Full&nbsp;Text&nbsp;Online&nbsp;<i class='fa fa-cloud-download'></i>
+    <% end %>
+<% end %>
+
+
+<% if result['location'] %>
+  <p>
+    <span class='location card-text'><%= result['location'] %></span>
+  </p>
+<% end %>
+
+<% if result['subsubsubseries'] %>
+    <p class='subseries card-text'><i class="fa fa-angle-double-right"></i> Part of <i class="fa fa-folder"></i> <a href="<%= result['subsubsubseries_url'] %>"><%= result['subsubsubseries'] %></a></p>
+<% end %>
+<% if result['subsubseries'] %>
+    <p class='subseries card-text'><i class="fa fa-angle-double-right"></i> Part of <i class="fa fa-folder"></i> <a href="<%= result['subsubseries_url'] %>"><%= result['subsubseries'] %></a></p>
+<% end %>
+<% if result['subseries'] %>
+    <p class='subseries card-text'><i class="fa fa-angle-double-right"></i> Part of <i class="fa fa-folder"></i> <a href="<%= result['subseries_url'] %>"><%= result['subseries'] %></a></p>
+<% end %>
+<% if result['series'] %>
+    <p class='series card-text'><i class="fa fa-angle-double-right"></i> Part of <i class="fa fa-folder"></i> <a href="<%= result['series_url'] %>"><%= result['series'] %></a></p>
+<% end %>
+<% if result['collection'] %>
+    <p class='collection card-text'><i class="fa fa-angle-double-right"></i> Part of <i class="fa fa-archive"></i> <a href="<%= result['collection'][1] %>"><%= result['collection'][0] %></a></p>
+<% end %>
+<% if result["collecting_area"]%>
+    <p class='collecting_area card-text'><a href="<%= result["collecting_area"] %>"><%= result["collecting_area"] %></a></p>
+<% end %>
+
+</div>

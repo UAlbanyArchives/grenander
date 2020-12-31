@@ -38,6 +38,10 @@
 	}
 }
 
+.facets-heading {
+	font-size: 1.5rem;
+}
+
 /* Search Box */
 
 .search-source .container-fluid {
@@ -55,6 +59,10 @@
 	background-position: top left;
 }
 
+#main-container .row section .d-flex {
+	height: 100%;
+}
+
 .search-source h2.search-intro {
 	display: inline-block;
 	color: #ffffff;
@@ -63,6 +71,10 @@
 	margin-left: 20px;
 	font-weight: 300;
 	text-shadow: 3px 3px 5px #46166b;
+}
+
+.search-source .container-fluid {
+	justify-content: center;
 }
 
 .search-source .container-fluid form {
