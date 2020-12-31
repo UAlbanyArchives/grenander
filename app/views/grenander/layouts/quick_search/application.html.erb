@@ -17,7 +17,7 @@
 <body class="<%= body_class %>" data-quicksearch-ga-query="<%= strip_tags(@log_query) %>">
 
 <%= render partial: 'layouts/grenander/navbar' %>
-<main id="main-container" class="<%= container_classes %>" role="main" aria-label="main-container">
+<main id="main-container" class="container-fluid" role="main" aria-label="main-container">
     <div class ="row">
     <section id="content" class="<%= main_content_classes %> order-last" aria-label="<%= t('blacklight.search.documents.aria.search_results') %>">
       <%= render partial: 'grenander/search_source' %>
