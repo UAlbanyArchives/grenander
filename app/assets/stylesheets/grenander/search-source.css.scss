@@ -44,7 +44,11 @@
 
 /* Search Box */
 
-.search-source .container-fluid {
+.search-source {
+	padding-bottom: 1.2rem;
+}
+
+.search-source .source-box {
 	background-color: #642a90;
 	min-height: 125px;
 	padding: 1.25rem 1rem 1.25rem 1.25rem;
