@@ -1,18 +1,16 @@
 <h2 class="facets-heading">Search</h2>
 
-
-<% searchURI = URI.join(root_url, "search") %>
-<% arclightURI = URI.join(root_url, "description") %>
-<% hyraxURI = URI.join(root_url, "catalog") %>
-<% historyURI = URI.join(root_url, "history") %>
-<% mathesURI = URI.join(root_url, "mathes") %>
+<% searchURI = URI.join(request.base_url, "search") %>
+<% arclightURI = URI.join(request.base_url, "description") %>
+<% hyraxURI = URI.join(request.base_url, "catalog") %>
+<% historyURI = URI.join(request.base_url, "history") %>
+<% mathesURI = URI.join(request.base_url, "mathes") %>
 
 <% searchURI.query = request.query_parameters.to_query %>
 <% arclightURI.query = request.query_parameters.to_query %>
 <% hyraxURI.query = request.query_parameters.to_query %>
 <% historyURI.query = request.query_parameters.to_query %>
 <% mathesURI.query = request.query_parameters.to_query %>
-
 
 <ul id="search-sources-menu" class="nav nav-pills flex-column search-sources">
   <li class="nav-item">
@@ -25,7 +23,7 @@
     <a class="nav-link catalog" href="#">Online Content</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link history" href="#">UAlbany History</a>
+    <a class="nav-link history" href="<%= historyURI.to_s %>">UAlbany History</a>
   </li>
   <li class="nav-item">
     <a class="nav-link mathes" href="<%= mathesURI.to_s %>">Mathes Childrens Literature</a>

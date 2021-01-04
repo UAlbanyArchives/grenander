@@ -78,13 +78,14 @@ body {
 /* logo */
 
 .navbar-logo {
-	background-image: image_url('grenander/grenanderSmall.png');
+	background-image: image_url('grenander/grenanderLogo.png');
 	background-color: transparent;
 	background-position: center left;
 	background-repeat: no-repeat;
 	display: inline-block;
 	margin-right: 20px;
 	margin-top: -0.4rem;
+	margin-bottom: -0.4rem;
 	overflow: hidden;
 	padding-left: 0;
 	padding-right: 0;
@@ -93,29 +94,31 @@ body {
 	background-size: contain;
 	background-position: center;
 	flex: 0 0 250px;
-	height: 100px;
+	
 }
 
 @media (min-width: 576px) {
 	.navbar-logo {
 		flex: 0 0 450px;
+		height: 90px;
 	}
 }
 
 @media (min-width: 768px) {
 	.navbar-logo {
 		flex: 0 0 320px;
-		background-image: image_url('grenander/grenanderLogo.png');
 		background-color: transparent;
 		background-position: center left;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
+		height: 70px;
 	}
 }
 
 @media (min-width: 992px) {
 	.navbar-logo {
 		flex: 0 0 500px;
+		height: 100px;
 	}
 }
