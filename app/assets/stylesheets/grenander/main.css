@@ -20,11 +20,16 @@ a:hover {
 	border-color: #46166B;
 }
 
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary.active:not(:disabled):not(.disabled), .show > .btn-primary.dropdown-toggle {
+	/*color: #46166B;*/
+	background-color: #eaaa00;
+	border-color: #eaaa00;
+}
+
 .btn-primary:hover,
 .btn-primary:focus,
-.btn-primary:active,
 .btn-primary.active {
-	color: #46166B;
+	/*color: #46166B;*/
 	background-color: #eaaa00;
 	border-color: #eaaa00;
 }
@@ -78,6 +83,10 @@ li.nav-item a:hover {
 .al-sticky-sidebar .card,
 .page-sidebar .card {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary.active:not(:disabled):not(.disabled):focus, .show > .btn-primary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.2rem rgba(70, 22, 107, 0.5);
 }
 
 /* pagination */

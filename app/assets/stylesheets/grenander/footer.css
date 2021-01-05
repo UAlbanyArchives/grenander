@@ -26,18 +26,26 @@ footer {
    text-align: left;
 }
 
-.footLeft{
-	float: left;
-}
 
 .footRight {
-	float: right;
+	margin-top: 1rem;
 }
 
 .footRight {
  text-align:left
 }
+
 .footRight img {
  max-width:300px;
  margin-bottom:15px
+}
+
+@media (min-width: 992px) {
+	.footLeft{
+		float: left;
+	}
+	.footRight {
+		float: right;
+		margin-top: 0;
+	}
 }
