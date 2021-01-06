@@ -18,16 +18,7 @@
 
 <%= render partial: 'layouts/grenander/navbar' %>
 <main id="main-container" class="<%= container_classes %>" role="main" aria-label="main-container">
-    <div class ="row">
-    <section id="content" class="<%= main_content_classes %> order-last" aria-label="<%= t('blacklight.search.documents.aria.search_results') %>">
-      <%= render partial: 'grenander/search_source' %>
-    </section>
-
-    <section id="sidebar" class="<%= sidebar_classes %> order-first" aria-label="<%= t('blacklight.search.documents.aria.limit_search') %>">
-      <%= render partial: 'grenander/source_options' %>
-    </section>
-    </div>
-
+    <%= render partial: 'grenander/search_row' %>
 
         <div class="medium-12 main columns">
             <div class="skip-link">
