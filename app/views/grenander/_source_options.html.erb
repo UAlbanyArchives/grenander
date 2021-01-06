@@ -5,12 +5,16 @@
 <% hyraxURI = URI.join(request.base_url, "catalog") %>
 <% historyURI = URI.join(request.base_url, "history") %>
 <% mathesURI = URI.join(request.base_url, "mathes") %>
+<% pamphletsURI = URI.join(request.base_url, "books") %>
+<% booksURI = URI.join(request.base_url, "books") %>
 
 <% searchURI.query = request.query_parameters.to_query %>
 <% arclightURI.query = request.query_parameters.to_query %>
 <% hyraxURI.query = request.query_parameters.to_query %>
 <% historyURI.query = request.query_parameters.to_query %>
 <% mathesURI.query = request.query_parameters.to_query %>
+<% pamphletsURI.query = request.query_parameters.to_query %>
+<% booksURI.query = request.query_parameters.to_query %>
 
 <ul id="search-sources-menu" class="nav nav-pills flex-column search-sources">
   <li class="nav-item">
@@ -27,6 +31,9 @@
   </li>
   <li class="nav-item">
     <a class="nav-link mathes" href="<%= mathesURI.to_s %>">Mathes Childrens Literature</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Political Pamphlets</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#">Rare Books</a>
@@ -52,6 +59,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link mathes" href="#">Mathes Childrens Literature</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Political Pamphlets</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Rare Books</a>
