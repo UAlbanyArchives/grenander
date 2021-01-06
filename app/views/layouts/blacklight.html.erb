@@ -1,19 +1,25 @@
 <% content_for(:content) do %>
-  <% if content_for? :sidebar %>
-    <section id="content" class="<%= main_content_classes %> order-last" aria-label="<%= t('blacklight.search.documents.aria.search_results') %>">    
+  <%= render partial: 'grenander/search_row' %>
 
-      <%= content_for(:container_header) %>
-      <%= yield %>
-    </section>
+  <div class="container">
+    <div class="row">
+      <% if content_for? :sidebar %>
+        <section id="content" class="<%= main_content_classes %> order-last" aria-label="<%= t('blacklight.search.documents.aria.search_results') %>">    
 
-    <section id="sidebar" class="<%= sidebar_classes %> order-first" aria-label="<%= t('blacklight.search.documents.aria.limit_search') %>">
-      <%= content_for(:sidebar) %>
-    </section>
-  <% else %>
-    <section class="col-md-12">
-      <%= yield %>
-    </section>
-  <% end %>
+          <%= content_for(:container_header) %>
+          <%= yield %>
+        </section>
+
+        <section id="sidebar" class="<%= sidebar_classes %> order-first" aria-label="<%= t('blacklight.search.documents.aria.limit_search') %>">
+          <%= content_for(:sidebar) %>
+        </section>
+      <% else %>
+        <section class="col-md-12">
+          <%= yield %>
+        </section>
+      <% end %>
+    </div>
+  </div>
 <% end %>
 
 <%= render template: "layouts/blacklight/base" %>
