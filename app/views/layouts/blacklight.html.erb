@@ -13,8 +13,14 @@
         <%= content_for(:sidebar) %>
       </section>
     <% else %>
-      <section class="col-md-12">
+      <section id="content" class="<%= main_content_classes %> order-last" aria-label="<%= t('blacklight.search.documents.aria.search_results') %>">
+        <%= render partial: 'grenander/search_source' %>
+
+        <%= content_for(:container_header) %>
         <%= yield %>
+      </section>
+      <section id="sidebar" class="<%= sidebar_classes %> order-first" aria-label="<%= t('blacklight.search.documents.aria.limit_search') %>">
+        <%= render partial: 'grenander/source_options' %>
       </section>
     <% end %>
 
