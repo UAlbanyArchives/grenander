@@ -5,17 +5,6 @@
 	padding: 0.2rem 1rem;
 }
 
-.search-sources li.nav-item a.active {
-	background-image: image_url('grenander/index.png');
-	background-color: #46166B;
-	background-position: center right;
-	background-repeat: no-repeat;
-	border-left: 5px solid #006c68;
-	border-radius: 0px;
-	display: block;
-	color: #EBE6F0;
-}
-
 .more-sources .btn {
 	margin-top: .3rem;
 }
@@ -28,7 +17,6 @@
     content: '+';
 }
 
-
 @media (min-width: 992px) {
 	.search-sources li.nav-item a {
 		display: block;
@@ -36,6 +24,32 @@
 	.more-sources {
 		display: none;
 	}
+	.shrink-search-options {
+		min-height: 0;
+	}
+}
+
+.shrink-search-options {
+	min-height: 150px;
+}
+
+.shrink-search-options .search-sources li.nav-item a {
+	display: none;
+}
+
+.shrink-search-options .more-sources {
+	display: block;
+}
+
+.search-sources li.nav-item a.active {
+	background-image: image_url('grenander/index.png');
+	background-color: #46166B;
+	background-position: center right;
+	background-repeat: no-repeat;
+	border-left: 5px solid #006c68;
+	border-radius: 0px;
+	display: block;
+	color: #EBE6F0;
 }
 
 .facets-heading {
@@ -64,6 +78,10 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: top left;
+}
+
+#search-sources-menu {
+  margin-bottom: 0;
 }
 
 .search-row .container .row section .d-flex {
