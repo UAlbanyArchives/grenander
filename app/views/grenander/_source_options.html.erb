@@ -8,9 +8,9 @@
 <% pamphletsURI = URI.join(request.base_url, "books") %>
 <% booksURI = URI.join(request.base_url, "books") %>
 
-<% mathesFacet = { f[collecting_area_ssim][]: "Mathes+Childrens+Literature"} %>
-<% pamphletsFacet = { f[collecting_area_ssim][]: "Political+Pamphlets"} %>
-<% booksFacet = { f[collecting_area_ssim][]: "Rare+Books"} %>
+<% mathesFacet = { "f[collecting_area_ssim][]": "Mathes+Childrens+Literature"} %>
+<% pamphletsFacet = { "f[collecting_area_ssim][]": "Political+Pamphlets"} %>
+<% booksFacet = { "f[collecting_area_ssim][]": "Rare+Books"} %>
 
 <% searchURI.query = request.query_parameters.to_query %>
 <% arclightURI.query = request.query_parameters.to_query %>
