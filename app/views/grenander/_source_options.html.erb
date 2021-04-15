@@ -12,9 +12,9 @@
 <% pamphletsFacet = Marshal.load(Marshal.dump(request.query_parameters)) %>
 <% booksFacet = Marshal.load(Marshal.dump(request.query_parameters)) %>
 
-<% mathesFacet["f"]["collecting_area_ssim"] = ["Mathes+Childrens+Literature"] %>
-<% pamphletsFacet["f"]["collecting_area_ssim"] = ["Political+Pamphlets"] %>
-<% booksFacet["f"]["collecting_area_ssim"] = ["Rare+Books"] %>
+<% mathesFacet["f"] = {"collecting_area_ssim": ["Mathes+Childrens+Literature"]} %>
+<% pamphletsFacet["f"] = {"collecting_area_ssim": ["Political+Pamphlets"]} %>
+<% booksFacet["f"] = {"collecting_area_ssim": ["Rare+Books"]} %>
 
 <% searchURI.query = request.query_parameters.to_query %>
 <% arclightURI.query = request.query_parameters.to_query %>
