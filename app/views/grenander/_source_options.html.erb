@@ -8,39 +8,43 @@
 <% pamphletsURI = URI.join(request.base_url, "books") %>
 <% booksURI = URI.join(request.base_url, "books") %>
 
-<% mathesFacet = { "f[collecting_area_ssim][]": "Mathes+Childrens+Literature"} %>
-<% pamphletsFacet = { "f[collecting_area_ssim][]": "Political+Pamphlets"} %>
-<% booksFacet = { "f[collecting_area_ssim][]": "Rare+Books"} %>
+<% mathesFacet = Marshal.load(Marshal.dump(request.query_parameters)) %>
+<% pamphletsFacet = Marshal.load(Marshal.dump(request.query_parameters)) %>
+<% booksFacet = Marshal.load(Marshal.dump(request.query_parameters)) %>
+
+<% mathesFacet["f"]["collecting_area_ssim"] = ["Mathes+Childrens+Literature"] %>
+<% pamphletsFacet["f"]["collecting_area_ssim"] = ["Political+Pamphlets"] %>
+<% booksFacet["f"]["collecting_area_ssim"] = ["Rare+Books"] %>
 
 <% searchURI.query = request.query_parameters.to_query %>
 <% arclightURI.query = request.query_parameters.to_query %>
 <% hyraxURI.query = request.query_parameters.to_query %>
 <% historyURI.query = request.query_parameters.to_query %>
-<% mathesURI.query = request.query_parameters.merge(mathesFacet).to_query %>
-<% pamphletsURI.query = request.query_parameters.merge(pamphletsFacet).to_query %>
-<% booksURI.query = request.query_parameters.merge(booksFacet).to_query %>
+<% mathesURI.query = mathesFacet.to_query %>
+<% pamphletsURI.query = pamphletsFacet.to_query %>
+<% booksURI.query = booksFacet.to_query %>
 
 <ul id="search-sources-menu" class="nav nav-pills flex-column search-sources">
   <li class="nav-item">
-    <a class="nav-link search active" href="<%= searchURI.to_s %>">Everything</a>
+    <a class="nav-link search active" href="<%= URI.decode(searchURI.to_s) %>">Everything</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link description" href="<%= arclightURI.to_s %>">All Collections</a>
+    <a class="nav-link description" href="<%= URI.decode(arclightURI.to_s) %>">All Collections</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link catalog" href="<%= hyraxURI.to_s %>">Online Content</a>
+    <a class="nav-link catalog" href="<%= URI.decode(hyraxURI.to_s) %>">Online Content</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link history" href="<%= historyURI.to_s %>">UAlbany History</a>
+    <a class="nav-link history" href="<%= URI.decode(historyURI.to_s) %>">UAlbany History</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link mathes" href="<%= mathesURI.to_s %>">Mathes Childrens Literature</a>
+    <a class="nav-link mathes" href="<%= URI.decode(mathesURI.to_s) %>">Mathes Childrens Literature</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="<%= booksURI.to_s %>">Political Pamphlets</a>
+    <a class="nav-link pamphlets" href="<%= URI.decode(pamphletsURI.to_s) %>">Political Pamphlets</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="<%= booksURI.to_s %>">Rare Books</a>
+    <a class="nav-link books" href="<%= URI.decode(booksURI.to_s) %>">Rare Books</a>
   </li>
 </ul>
 <div class="more-sources">
@@ -50,25 +54,25 @@
   <div class="collapse" id="collapseSources">
     <ul class="nav nav-pills flex-column">
       <li class="nav-item">
-        <a class="nav-link search" href="<%= searchURI.to_s %>">Everything</a>
+        <a class="nav-link search" href="<%= URI.decode(searchURI.to_s) %>">Everything</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link description" href="<%= arclightURI.to_s %>">All Collections</a>
+        <a class="nav-link description" href="<%= URI.decode(arclightURI.to_s) %>">All Collections</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link catalog" href="<%= hyraxURI.to_s %>">Online Content</a>
+        <a class="nav-link catalog" href="<%= URI.decode(hyraxURI.to_s) %>">Online Content</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link history" href="<%= historyURI.to_s %>">UAlbany History</a>
+        <a class="nav-link history" href="<%= URI.decode(historyURI.to_s) %>">UAlbany History</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link mathes" href="<%= mathesURI.to_s %>">Mathes Childrens Literature</a>
+        <a class="nav-link mathes" href="<%= URI.decode(mathesURI.to_s) %>">Mathes Childrens Literature</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Political Pamphlets</a>
+        <a class="nav-link pamphlets" href="<%= URI.decode(pamphletsURI.to_s) %>">Political Pamphlets</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Rare Books</a>
+        <a class="nav-link books" href="<%= URI.decode(booksURI.to_s) %>">Rare Books</a>
       </li>
     </ul>
   </div>
