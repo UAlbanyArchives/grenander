@@ -15,7 +15,7 @@ a:hover {
 }
 
 .facets-collapse .facet-limit button.btn:focus {
-        box-shadow: 0 0 0 0.2rem #9e68c7;
+        box-shadow: 0 0 0 0.2rem (158, 104, 199, 0.25);
 }
 
 .btn-primary {
