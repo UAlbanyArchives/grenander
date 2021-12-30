@@ -14,6 +14,10 @@ a:hover {
 	background-color: #006c68;
 }
 
+.facets-collapse .facet-limit button.btn:focus {
+        box-shadow: 0 0 0 0.2rem #9e68c7;
+}
+
 .btn-primary {
 	color: #EBE6F0;
 	background-color: #46166B;
