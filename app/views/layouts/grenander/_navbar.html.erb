@@ -17,7 +17,7 @@
 	        <a class="dropdown-item" href="<%= URI.join(request.base_url, "description/", "repositories/", "ndpa") %>">National Death Penalty Archive</a>
 	        <a class="dropdown-item" href="<%= URI.join(request.base_url, "description/", "repositories/", "ger") %>">German Intellectual Émigré</a>
 	        <a class="dropdown-item" href="<%= URI.join(request.base_url, "description/", "repositories/", "ua") %>">University Archives</a>
-	        <a class="dropdown-item" href="https://archives.albany.edu/web/mathes">Mathes Childrens Literature</a>
+	        <a class="dropdown-item" href="<%= request.base_url + "/books?f[collecting_area_ssim][]=Mathes+Childrens+Literature" %>">Mathes Childrens Literature</a>
 	        <a class="dropdown-item" href="<%= URI.join(request.base_url, "description/", "repositories/", "mss") %>">Business and Literary Manuscripts</a>
 	        <a class="dropdown-item" href="<%= URI.join(request.base_url, "/books") %>">Rare Books</a>
 	        <a class="dropdown-item" href="https://archives.albany.edu/web/webarchives">Web Archives</a>
