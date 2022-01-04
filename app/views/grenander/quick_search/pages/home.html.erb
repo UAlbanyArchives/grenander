@@ -7,13 +7,13 @@
 			<h6 class="card-subtitle mb-4 text-muted">includes a combined search of:</h6>
 
 		    <ul>
-				<li><a href="<% request.base_url "/description" %>">Archives & Manuscripts</a> (records of all archives and manuscript material in the M.E. Grenander Department of Special Collections & Archives) 
+				<li><a href="<% request.base_url + "/description" %>">Archives & Manuscripts</a> (records of all archives and manuscript material in the M.E. Grenander Department of Special Collections & Archives) 
 					<ul>
 						<li>Some of these items are available online and marked with <span class="badge badge-success">online content</span>.</li>
 						<li>If collections are not available online, you may request a few items to be digitized, or visit our reading room to view them in person.</li>
 					</ul>
 				</li>
-				<li><a href=""<% request.base_url "/catalog" %>">Online Content</a> (items that are available online because they have been digitized or were "born-digital," or created digitally)
+				<li><a href=""<% request.base_url + "/catalog" %>">Online Content</a> (items that are available online because they have been digitized or were "born-digital," or created digitally)
 					<ul>
 
 						<li>Digital Selections are also represented in Collections alongside simmilar materials that may not be available online.</li>
@@ -21,13 +21,13 @@
 					</ul>
 				</li>
 
-				<li><a href="<% request.base_url "/history" %>">UAlbany History</a> (curated timeline of events from the university's history with links to source material)</li>
+				<li><a href="<% request.base_url + "/history" %>">UAlbany History</a> (curated timeline of events from the university's history with links to source material)</li>
 
-				<li><a href="<% request.base_url "/books?f[collecting_area_ssim][]=Mathes+Childrens+Literature" %>">Mathes Childrens Literature</a> (catalog of books from the Miriam Snow Mathes Historical Children's Literature Collection)</li>
+				<li><a href="<% request.base_url + "/books?f[collecting_area_ssim][]=Mathes+Childrens+Literature" %>">Mathes Childrens Literature</a> (catalog of books from the Miriam Snow Mathes Historical Children's Literature Collection)</li>
 				
-				<li><a href="<% request.base_url "/books?f[collecting_area_ssim][]=Political+Pamphlets" %>">Political Pamphlets</a> (a collection of poltical pamphlets primarily sourced from the German and Jewish Intellectual Émigré Collections)</li>			
+				<li><a href="<% request.base_url + "/books?f[collecting_area_ssim][]=Political+Pamphlets" %>">Political Pamphlets</a> (a collection of poltical pamphlets primarily sourced from the German and Jewish Intellectual Émigré Collections)</li>			
 	
-				<li><a href="<% request.base_url "/books" %>">Rare Books</a> (catalog of pre-1801 European and pre-1820 American printed books)</li>
+				<li><a href="<% request.base_url + "/books" %>">Rare Books</a> (catalog of pre-1801 European and pre-1820 American printed books)</li>
 			</ul>
 
 		</div>
