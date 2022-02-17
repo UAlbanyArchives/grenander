@@ -1,0 +1,62 @@
+<% title %>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<%# render partial: 'layouts/quick_search/page_title', locals: { page_title: @page_title } %>
+<%# render partial: 'layouts/quick_search/search_form' %>
+
+<div id="quicksearch-ga-debug">
+    <ol></ol>
+</div>
+<div class="quicksearch-ga-click-tracking">
+    <div id="result-types" class="row">
+        <div class="col-12 result-types">
+            <%= render partial: 'layouts/quick_search/found_types' %>
+        </div>
+    </div>
+</div>
+<%# FIXME: This logic could stand a second look %>
+<div id="spelling-suggestion" class="hidden"></div>
+
+<div class="quicksearch-ga-click-tracking">
+    <div class="row articles-catalog justify-content-center">
+        <div class="col-lg-6 col-xl-4 summon module">
+            <%= render_module(@arclight, 'arclight') %>
+        </div>
+        <div class="col-lg-6 col-xl-4 catalog module">
+            <%= render_module(@hyrax, 'hyrax') %>
+        </div>
+        <div class="col-lg-6 col-xl-4 catalog module">
+            <%= render_module(@history, 'history') %>
+        </div>
+        <div class="col-lg-6 col-xl-4 catalog module">
+            <%= render_module(@mathes, 'mathes') %>
+        </div>
+        <div class="col-lg-6 col-xl-4 catalog module">
+            <%= render_module(@pamphlets, 'pamphlets') %>
+        </div>
+        <div class="col-lg-6 col-xl-4 catalog module">
+            <%= render_module(@books, 'books') %>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div id="more-options" class="col-12 more-options">
+                <% if @query.length > 0 %>
+                    <h4>More search options for <span class="query">"<%= display_query %>"</span></h4>
+                <% else %>
+                    <h4>A few more places to try:</h4>
+                <% end %>
+                <ul>
+                    <% @search_services_for_display.each do |link| %>
+                        <li>
+                            <i class="fa fa-external-link" aria-hidden="true"></i>
+                            <%= link_to link['name'], link['link'] %>
+                        </li>
+                    <% end %>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>

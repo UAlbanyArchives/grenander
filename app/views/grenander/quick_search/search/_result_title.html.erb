@@ -1,0 +1,10 @@
+<% if @query.present? %>
+	<%= link_to link + "?find=" + @query do %>
+	    <%= truncate(sanitize(title), :length => 100, separator: ' ') %>
+	<% end %>
+<% else %>
+	<%= link_to link do %>
+	    <%= truncate(sanitize(title), :length => 100, separator: ' ') %>
+	<% end %>
+<% end %>
+<small class='date'><%= date %></small>
