@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.add_dependency "rails", "~> 5.2.4", ">= 5.2.4.3"
+  spec.add_dependency "rails", ">= 5.2.4.3"
   spec.add_dependency "font-awesome-sass", "~> 4.6.2"
   spec.add_dependency 'quick_search-core', '~> 0.1'
   spec.add_dependency 'bootstrap', '>= 4.3.1'
