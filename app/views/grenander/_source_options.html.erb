@@ -41,25 +41,25 @@
 
 <ul id="search-sources-menu" class="nav nav-pills flex-column search-sources">
   <li class="nav-item">
-    <a class="nav-link search active" href="<%= URI.decode(searchURI.to_s) %>">Collections</a>
+    <a class="nav-link search active" href="<%= CGI::unescape(searchURI.to_s) %>">Collections</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link description" href="<%= URI.decode(arclightURI.to_s) %>">Archives & Manuscripts</a>
+    <a class="nav-link description" href="<%= CGI::unescape(arclightURI.to_s) %>">Archives & Manuscripts</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link catalog" href="<%= URI.decode(hyraxURI.to_s) %>">Online Content</a>
+    <a class="nav-link catalog" href="<%= CGI::unescape(hyraxURI.to_s) %>">Online Content</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link history" href="<%= URI.decode(historyURI.to_s) %>">UAlbany History</a>
+    <a class="nav-link history" href="<%= CGI::unescape(historyURI.to_s) %>">UAlbany History</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link mathes" href="<%= URI.decode(mathesURI.to_s) %>">Mathes Childrens Literature</a>
+    <a class="nav-link mathes" href="<%= CGI::unescape(mathesURI.to_s) %>">Mathes Childrens Literature</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link pamphlets" href="<%= URI.decode(pamphletsURI.to_s) %>">Political Pamphlets</a>
+    <a class="nav-link pamphlets" href="<%= CGI::unescape(pamphletsURI.to_s) %>">Political Pamphlets</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link books" href="<%= URI.decode(booksURI.to_s) %>">Rare Books</a>
+    <a class="nav-link books" href="<%= CGI::unescape(booksURI.to_s) %>">Rare Books</a>
   </li>
 </ul>
 <div class="more-sources">
@@ -69,25 +69,25 @@
   <div class="collapse" id="collapseSources">
     <ul class="nav nav-pills flex-column">
       <li class="nav-item">
-        <a class="nav-link search" href="<%= URI.decode(searchURI.to_s) %>">Collections</a>
+        <a class="nav-link search" href="<%= CGI::unescape(searchURI.to_s) %>">Collections</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link description" href="<%= URI.decode(arclightURI.to_s) %>">Archives & Manuscripts</a>
+        <a class="nav-link description" href="<%= CGI::unescape(arclightURI.to_s) %>">Archives & Manuscripts</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link catalog" href="<%= URI.decode(hyraxURI.to_s) %>">Online Content</a>
+        <a class="nav-link catalog" href="<%= CGI::unescape(hyraxURI.to_s) %>">Online Content</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link history" href="<%= URI.decode(historyURI.to_s) %>">UAlbany History</a>
+        <a class="nav-link history" href="<%= CGI::unescape(historyURI.to_s) %>">UAlbany History</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link mathes" href="<%= URI.decode(mathesURI.to_s) %>">Mathes Childrens Literature</a>
+        <a class="nav-link mathes" href="<%= CGI::unescape(mathesURI.to_s) %>">Mathes Childrens Literature</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link pamphlets" href="<%= URI.decode(pamphletsURI.to_s) %>">Political Pamphlets</a>
+        <a class="nav-link pamphlets" href="<%= CGI::unescape(pamphletsURI.to_s) %>">Political Pamphlets</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link books" href="<%= URI.decode(booksURI.to_s) %>">Rare Books</a>
+        <a class="nav-link books" href="<%= CGI::unescape(booksURI.to_s) %>">Rare Books</a>
       </li>
     </ul>
   </div>
