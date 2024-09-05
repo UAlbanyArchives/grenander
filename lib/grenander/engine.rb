@@ -1,8 +1,6 @@
 require 'rubygems'
-require 'sass-rails'
 require 'jquery-rails'
 require 'bootstrap'
-require 'font-awesome-sass'
 
 module Grenander
   class Engine < ::Rails::Engine

@@ -28,8 +28,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rails", ">= 5.2.4.3"
   spec.add_dependency "font-awesome-sass", "~> 4.6.2"
   #spec.add_dependency 'quick_search-core', '~> 0.2.0'
-  spec.add_dependency 'bootstrap', '>= 4.3.1'
-  spec.add_dependency 'font-awesome-rails'
+  #spec.add_dependency 'bootstrap', '>= 4.3.1'
+  #spec.add_dependency 'font-awesome-rails'
   spec.add_dependency 'jquery-rails'
   spec.add_dependency 'd3-rails'
   spec.add_dependency 'lodash-rails'
