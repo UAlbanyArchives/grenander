@@ -11,7 +11,14 @@ Header and footer menus for UAlbany rails apps
 gem 'grenander', git: 'https://github.com/UAlbanyArchives/grenander'
 ```
 
-2. Add templates to `app/views/layouts/blacklight/base.html.erb`
+2. Add config to `app/contollers/catalog_controller.rb` to set to full width:
+
+```
+## Set to full-width layout with container-fluid
+config.full_width_layout = true
+```
+
+3. Add templates to `app/views/layouts/blacklight/base.html.erb`
 
 ```
 wget -O app/views/layouts/blacklight/base.html.erb https://github.com/projectblacklight/blacklight/blob/master/app/views/layouts/blacklight/base.html.erb
@@ -26,9 +33,8 @@ wget -O app/views/layouts/blacklight/base.html.erb https://github.com/projectbla
       <%= content_for(:skip_links) %>
     </nav>
     
-    Remove/Comment --> <%= render partial: 'shared/header_navbar' %>
-    Here --> <%= render partial: 'layouts/grenander/header_navbar' %>
-    Here --> <%= render partial: 'layouts/grenander/search_subnav' %>
+    Remove or Comment --> <%= render partial: 'shared/header_navbar' %>
+    Here --> <%= render partial: 'layouts/grenander/navbar' %>
 
   <main id="main-container" class="<%= container_classes %>" role="main" aria-label="<%= t('blacklight.main.aria.main_container') %>">
     <%= content_for(:container_header) %>
@@ -40,28 +46,34 @@ wget -O app/views/layouts/blacklight/base.html.erb https://github.com/projectbla
     </div>
   </main>
 
-  	Remove/Comment -- > <%= render partial: 'shared/footer' %>
-    Here --> <%= render partial: 'layouts/grenander/footer' %>
-    Here --> <%= render partial: 'shared/modal' %>
+  	Remove or comment -- > <%= render partial: 'shared/footer' %>
+    Here --> <%= render partial: 'layouts/grenander/footer' %> 
+    <%= render partial: 'shared/modal' %>
   </body>
 ```
 
-3. Require JS in `app/assets/javascripts/application.js`
+4. Require JS in `app/assets/javascripts/application.js`
 
 ```
 //= require 'grenander/headerAffix'
 //= require 'grenander/searchHandler'
 ```
 
-4. Require CSS in `app/assets/stylesheets/application.css`
+5. Require CSS in `app/assets/stylesheets/application.css`
 
 ```
- *= require  'grenander/headerNavbar'
- *= require  'grenander/browseNav'
- *= require  'grenander/searchSubnav'
+ *= require  'grenander/navbar'
+ *= require  'grenander/search-source'
+ *= require  'grenander/footer'
+ *= require  'grenander/main'
+ *
+ *= require  'show_component'
+ *= require  'context_navigation'
+ *= require  'daos'
+ *= require  'repositories'
 ```
 
-5. Copy over 404.html, 422.html, 500.html to `public`
+6. Copy over 404.html, 422.html, 500.html to `public`
 
 ```
 wget -O public/404.html https://raw.githubusercontent.com/UAlbanyArchives/grenander/master/public/404.html
