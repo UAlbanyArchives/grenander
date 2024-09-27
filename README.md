@@ -35,6 +35,7 @@ wget -O app/views/layouts/blacklight/base.html.erb https://github.com/projectbla
     
     Remove or Comment --> <%= render partial: 'shared/header_navbar' %>
     Here --> <%= render partial: 'layouts/grenander/navbar' %>
+    Here --> <%= render partial: 'grenander/search_row' %>
 
   <main id="main-container" class="<%= container_classes %>" role="main" aria-label="<%= t('blacklight.main.aria.main_container') %>">
     <%= content_for(:container_header) %>
@@ -52,14 +53,7 @@ wget -O app/views/layouts/blacklight/base.html.erb https://github.com/projectbla
   </body>
 ```
 
-4. Require JS in `app/assets/javascripts/application.js`
-
-```
-//= require 'grenander/headerAffix'
-//= require 'grenander/searchHandler'
-```
-
-5. Require CSS in `app/assets/stylesheets/application.css`
+4. Require CSS in `app/assets/stylesheets/application.css`
 
 ```
  *= require  'grenander/navbar'
@@ -72,6 +66,14 @@ wget -O app/views/layouts/blacklight/base.html.erb https://github.com/projectbla
  *= require  'daos'
  *= require  'repositories'
 ```
+
+5. Require JS in `app/assets/javascripts/application.js`
+
+```
+//= require 'grenander/headerAffix'
+//= require 'grenander/searchHandler'
+```
+
 
 6. Copy over 404.html, 422.html, 500.html to `public`
 
