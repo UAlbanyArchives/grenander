@@ -84,6 +84,14 @@
 	flex-grow: 1;	
 }
 
+.search-query-form .input-group #search_field {
+	display: none;
+}
+
+.search-query-form {
+	margin-top: 1rem;
+}
+
 .search-source .source-box {
 	background-color: #642a90;
 	min-height: 125px;
@@ -117,7 +125,7 @@
 	text-align: center;
 	margin-right: 25px;
 	margin-left: 20px;
-	font-weight: 300;
+	font-weight: 400;
 	text-shadow: 3px 3px 5px #46166b;
 }
 
@@ -167,3 +175,8 @@
  .search-row {
  	/*background-image: url("https://archives.albany.edu/web/sliderImages/default/mpa3.jpg");*/
  }
+
+/* BS5 moved to dark font */
+.btn-info, .btn-info:hover, .btn-info:active {
+	color: #fff !important;
+}
