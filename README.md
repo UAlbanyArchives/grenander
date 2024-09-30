@@ -70,12 +70,27 @@ wget -O app/views/layouts/blacklight/base.html.erb https://github.com/projectbla
 5. Require JS in `app/assets/javascripts/application.js`
 
 ```
-//= require 'grenander/headerAffix'
-//= require 'grenander/searchHandler'
+import "grenander/search_sources_menu"
+```
+
+6. Now needs a `render_search_bar` helper, such as:
+
+```
+# search bar is custom to arclight so we need a helper
+  def render_search_bar(params: {}, q: nil, search_field: nil)
+    params ||= {}
+    render(Arclight::SearchBarComponent.new(
+      url: search_catalog_path,
+      params: params.merge(f: (params[:f] || {}).except(:collection)),
+      q: q,
+      search_field: search_field,
+      autocomplete_path: suggest_index_catalog_path
+    ))
+  end
 ```
 
 
-6. Copy over 404.html, 422.html, 500.html to `public`
+7. Copy over 404.html, 422.html, 500.html to `public`
 
 ```
 wget -O public/404.html https://raw.githubusercontent.com/UAlbanyArchives/grenander/master/public/404.html

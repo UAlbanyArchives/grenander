@@ -16,7 +16,7 @@ gemspec
 
 gem "bootstrap"
 gem 'jquery-rails'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 5.15'
 gem 'd3-rails'
 gem 'lodash-rails'
 gem "nokogiri", '>=1.13.4'

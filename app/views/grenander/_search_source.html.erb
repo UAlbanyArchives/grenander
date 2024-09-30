@@ -2,10 +2,7 @@
 	<div class="navbar navbar-expand-sm search-source flex-fill">
 		<div class="source-box <%= container_classes %>">
 			<h2 class="search-intro"><%= source_name %></h2>
-			<%= render(Blacklight::SearchBarComponent.new(
-			  url: search_catalog_path,
-			  params: params.merge(group: true)
-			)) %>
+			  <%= render_search_bar(params: @params, q: @q, search_field: @search_field) %>
 		</div>
 	</div>
 </div>
