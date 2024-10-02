@@ -4,6 +4,10 @@
 	padding-top: 0 !important;
 }
 
+.toggle-bookmark .blacklight-icons svg {
+	fill: #642a90;
+}
+
 .blacklight-catalog-index #appliedParams {
 	margin-bottom: 1rem !important;
 }
@@ -62,3 +66,14 @@
 	border-color: #495057;
 }
 
+.facet-limit-active .card-header .btn {
+	color: #212529;
+}
+
+.facet-field-heading {
+	border-bottom: none;
+}
+
+#facet-online-content-header button:active {
+	border-color: #642a90;
+}
