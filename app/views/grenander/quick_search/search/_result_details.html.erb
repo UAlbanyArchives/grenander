@@ -85,8 +85,8 @@
 <% if result['collection'] %>
     <p class='collection card-text'><i class="fa fa-angle-double-right"></i> Part of <i class="fa fa-archive"></i> <a href="<%= result['collection'][1] %>"><%= result['collection'][0] %></a></p>
 <% end %>
-<% if result["collecting_area"]%>
-    <p class='collecting_area card-text'><a href="<%= result["collecting_area"] %>"><%= result["collecting_area"] %></a></p>
+<% if result["collecting_area_url"]%>
+    <p class='collecting_area card-text'><a href="<%= result["collecting_area_url"] %>"><%= result["collecting_area"] %></a></p>
 <% end %>
 
 </div>
