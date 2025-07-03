@@ -1,6 +1,6 @@
 <div class="d-flex align-items-center">
 	<div class="navbar navbar-expand-sm search-source flex-fill">
-		<div class="source-box <%= container_classes %>">
+		<div class="source-box container">
 			<h2 class="search-intro"><%= source_name %></h2>
 			<div class="flex-fill">
 				<%= render_search_bar(params: @params, q: @q, search_field: @search_field) %>
@@ -13,7 +13,7 @@
 				      <span class="open-paren">(</span><span data-role='bookmark-counter'><%= current_or_guest_user.bookmarks.count %></span><span class="close-paren">)</span>
 				    <% end %>
 
-				    <%= link_to t('blacklight.header_links.search_history'), blacklight.search_history_path, id:'history_nav' %>
+				    <%# link_to t('blacklight.header_links.search_history'), blacklight.search_history_path, id:'history_nav' %>
 
 				    <%= link_to t('blacklight.advanced_search.form.title').split.map(&:capitalize).join(' '), search_action_url(action: 'advanced_search') , id:'advanced_nav' %>
 
