@@ -1,0 +1,91 @@
+/* search results page */
+
+#main-container {
+	padding-top: 0 !important;
+}
+
+.toggle-bookmark .blacklight-icons svg {
+	fill: #642a90;
+}
+
+.blacklight-catalog-index #appliedParams {
+	margin-bottom: 1rem !important;
+}
+
+.btn-info:hover {
+	color: #fff;
+	background-color: #138496;
+	border-color: #117a8b;
+}
+
+.btn-info:active {
+	color: #fff;
+	background-color: #117a8b;
+	border-color: #10707f;
+}
+
+#documents article.document {
+	position: relative;
+	display: flex;
+	/*flex-direction: column;*/
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	    border-bottom-color: rgba(0, 0, 0, 0.125);
+	    border-bottom-style: solid;
+	    border-bottom-width: 1px;
+	border-radius: 0.25rem;
+	padding: 1rem 1rem;
+	margin: 1rem 0rem;
+}
+
+.document .document-metadata .btn-link,
+.document .document-metadata .truncator,
+.document .document-metadata .truncator .view-more,
+.document .document-metadata .truncator .view-less,
+.document .document-metadata .truncator .icon {
+	color: #46166B !important;
+	text-decoration: none;
+}
+
+
+.document .document-metadata .btn-link:hover * {
+	color: #006c68 !important;
+	text-decoration: underline;
+}
+
+.document .document-metadata {
+	margin-bottom: 0rem !important;
+}
+
+.facets-header {
+	padding-top: 0 !important;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+	background-color: #006c68 !important;
+}
+
+.dropdown-item:hover {
+	color: #EBE6F0;
+	background-color: #46166B !important;
+}
+
+.btn-outline-secondary {
+	color: #495057;
+	border-color: #495057;
+}
+
+.facet-limit-active .card-header .btn {
+	color: #212529;
+}
+
+.facet-field-heading {
+	border-bottom: none;
+}
+
+#facet-online-content-header button:active {
+	border-color: #642a90;
+}

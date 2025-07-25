@@ -14,11 +14,9 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem "font-awesome-rails"
-gem "bootstrap", '>= 4.3.1'
-gem 'font-awesome-rails'
+gem "bootstrap"
 gem 'jquery-rails'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', '~> 5.15'
 gem 'd3-rails'
 gem 'lodash-rails'
 gem "nokogiri", '>=1.13.4'

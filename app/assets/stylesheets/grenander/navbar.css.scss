@@ -84,9 +84,10 @@ body {
 	left: auto;
 }
 
-.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+/*.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
 	color: #46166B;
-}
+	color: #fff;
+}*/
 
 /* logo */
 
@@ -112,7 +113,7 @@ body {
 
 @media (min-width: 576px) {
 	.navbar-logo {
-		flex: 0 0 450px;
+		flex: 0 0 400px;
 		height: 90px;
 	}
 }

@@ -1,14 +1,14 @@
 <nav class="navbar navbar-expand-md navbar-dark topbar" role="navigation">
   <div class="container">
     <%= link_to application_name, request.base_url, class: 'navbar-brand navbar-logo' %>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#user-util-collapse" aria-controls="user-util-collapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#user-util-collapse" aria-controls="user-util-collapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="user-util-collapse">
       <ul class="navbar-nav">
       	<li class="nav-item dropdown">
-	      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+	      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown">
 	        Collections
 	      </a>
 	      <div class="dropdown-menu">
@@ -28,7 +28,7 @@
 	    </li>
 
 	    <li class="nav-item dropdown">
-	      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+	      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown">
 	        Online Content
 	      </a>
 	      <div class="dropdown-menu">
@@ -36,18 +36,18 @@
 		<a class="dropdown-item" href="<%= request.base_url + "/history" %>">UAlbany History</a>
 	      	<a class="dropdown-item" href="<%= request.base_url + "/espy" %>">Espy Project Execution Records</a>
 	        <a class="dropdown-item" href="<%= request.base_url + "/web/selections/uaphotos" %>">University Photograph Collections</a>
-	        <a class="dropdown-item" href="<%= request.base_url + "/web/selections/asp" %>">Albany Student Press</a>
-	        <a class="dropdown-item" href="<%= request.base_url + "/web/selections/senate" %>">University Senate Legislation</a>
-	        <a class="dropdown-item" href="<%= request.base_url + "/web/selections/yearbooks" %>">Yearbook Collection</a>
+	        <a class="dropdown-item" href="<%= request.base_url + "/description/catalog/ua809" %>">Albany Student Press</a>
+	        <a class="dropdown-item" href="<%= request.base_url + "/description/catalog/ua200aspace_d2c8b71621925e217ad002c36f27822a" %>">University Senate Legislation</a>
+	        <a class="dropdown-item" href="<%= request.base_url + "/description/catalog/ua807" %>">Yearbook Collection</a>
 	        <a class="dropdown-item" href="<%= request.base_url + "/web/selections/milne" %>">The Milne School</a>
-	        <a class="dropdown-item" href="<%= request.base_url + "/web/selections/wamc" %>">WAMC Northeast Public Radio</a>
-	        <a class="dropdown-item" href="<%= request.base_url + "/web/selections/csea" %>">CSEA Publications</a>
+	        <a class="dropdown-item" href="<%= request.base_url + "/description/catalog/apap138" %>">WAMC Northeast Public Radio</a>
+	        <a class="dropdown-item" href="<%= request.base_url + "/description/catalog/apap015aspace_90e13b5a023aefdb6ab5d1de295703fc" %>">CSEA Publications</a>
 		<a class="dropdown-item" href="<%= request.base_url + "/web/exhibits" %>">Online Exhibits</a>
 	      </div>
 	    </li>
 
 	    <li class="nav-item dropdown">
-	      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+	      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown">
 	        About
 	      </a>
 	      <div class="dropdown-menu">
@@ -65,7 +65,7 @@
 	    </li>
 
 	    <li class="nav-item">
-	      <a class="nav-link" href="https://albany.libwizard.com/f/contactus?i_have_a_questi=Special%20Collections%20%26%20Archives">Contact</a>
+	      <a class="nav-link" href="https://albany.libwizard.com/f/contactus?i_have_a_questi=Special%20Collections%20%26%20Archives" class="modal-form">Contact</a>
 	    </li>
       </ul>
     </div>
