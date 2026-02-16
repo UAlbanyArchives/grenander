@@ -1,6 +1,10 @@
 <% @page_title = t('blacklight.search.page_title.title', constraints: render_search_to_page_title(search_state), application_name: application_name) %>
 
-<%= render 'shared/breadcrumbs' %>
+<% if lookup_context.exists?('shared/breadcrumbs', 'shared', true) %>
+  <%= render 'shared/breadcrumbs' %>
+<% else %>
+  <%= render (blacklight_config&.view_config(document_index_view_type)&.breadcrumbs_component || Blacklight::BreadcrumbsComponent).new(search_state: search_state) %>
+<% end %>
 
 <%= render (blacklight_config&.view_config(document_index_view_type)&.constraints_component || Blacklight::ConstraintsComponent).new(search_state: search_state) %>
 
@@ -16,11 +20,17 @@
 <% end %>
 
 <% content_for(:container_header) do -%>
-  <%= render 'search_results_header' %>
-  <%= render 'constraints' %>
+  <% if lookup_context.exists?('search_results_header', 'catalog', true) %>
+    <%= render 'search_results_header' %>
+  <% end %>
+  <% if lookup_context.exists?('constraints', 'catalog', true) %>
+    <%= render 'constraints' %>
+  <% end %>
 <% end %>
 
-<%= render 'search_header' %>
+<% if lookup_context.exists?('search_header', 'catalog', true) %>
+  <%= render 'search_header' %>
+<% end %>
 
 <h2 class="visually-hidden"><%= t('blacklight.search.search_results') %></h2>
 
