@@ -6,12 +6,12 @@
 				<%= render_search_bar(params: @params, q: @q, search_field: @search_field) %>
 				<div class="search-extra-controls flex-fill">
 				  <div class='input-group'>
-
-				  	
+				  	<% if defined?(current_or_guest_user) && current_or_guest_user.present? %>
 				    <%= link_to bookmarks_path, id:'bookmarks_nav' do %>
 				      <i class="fa fa-bookmark"></i> <span class="bookmarks-label"><%= t('blacklight.header_links.bookmarks') %></span>
 				      <span class="open-paren">(</span><span data-role='bookmark-counter'><%= current_or_guest_user.bookmarks.count %></span><span class="close-paren">)</span>
 				    <% end %>
+				  <% end %>
 
 				    <%# link_to t('blacklight.header_links.search_history'), blacklight.search_history_path, id:'history_nav' %>
 
