@@ -45,10 +45,10 @@
       <%= content_for(:skip_links) %>
     <% end %>
 
-    <%# render partial: 'shared/header_navbar' %>
-    <%= render partial: 'layouts/grenander/header_navbar' %>
+    <%= render partial: 'layouts/grenander/navbar' %>
+    <%= render partial: 'grenander/search_row' %>
 
-    <main id="main-container" class="<%= container_classes %> blah" role="main" aria-label="<%= t('blacklight.main.aria.main_container') %>">
+    <main id="main-container" class="<%= container_classes %>" role="main" aria-label="<%= t('blacklight.main.aria.main_container') %>">
       <%= content_for(:container_header) %>
 
       <%= render partial: 'shared/flash_msg', layout: 'shared/flash_messages' %>

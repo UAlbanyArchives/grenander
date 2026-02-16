@@ -4,10 +4,12 @@ body {
 
 a {
 	color: #642a90;
+	text-decoration: none;
 }
 
 a:hover {
 	color: #006c68;
+	text-decoration: underline;
 }
 
 .btn-info {
