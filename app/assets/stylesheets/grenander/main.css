@@ -40,6 +40,20 @@ a:hover {
 	border-color: #eaaa00;
 }
 
+.btn-outline-secondary {
+	color: #4b4f54;
+	border-color: #4b4f54;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.btn-outline-secondary:active,
+.btn-outline-secondary.active {
+	color: #fff;
+	background-color: #4b4f54;
+	border-color: #4b4f54;
+}
+
 #main-container {
 	padding-top: 1rem;
 }
@@ -54,6 +68,10 @@ li.nav-item a:hover {
 }
 
 /* facets */
+
+.page-sidebar .card-header {
+	border-bottom: none;
+}
 
 .page-sidebar .panel-body {
 	font-size: .85em; 
@@ -102,8 +120,13 @@ li.nav-item a:hover {
 }
 
 .pagination .page-item.active .page-link {
-	background-color: #9e68c7;
-	border-color: #9e68c7;
+	background-color: #642a90;
+	border-color: #642a90;
+	color: #fff;
+}
+
+.pagination .page-item .page-link:focus {
+	box-shadow: 0 0 0 0.2rem rgba(100, 42, 144, 0.25);
 }
 
 #searchLabel {

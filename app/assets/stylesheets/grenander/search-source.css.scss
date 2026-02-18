@@ -179,6 +179,25 @@
 	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 6px #46166B;
 }
 
+/* Search Extra Controls - Bookmarks and Advanced Search links */
+.search-source .search-extra-controls a {
+	color: #fff;
+	text-decoration: none;
+	padding: 0.25rem 0.5rem;
+	display: inline-block;
+	font-size: 0.8rem;
+}
+
+.search-source .search-extra-controls a:hover,
+.search-source .search-extra-controls a:focus {
+	color: rgba(255,255,255,0.75);
+}
+
+.search-source .search-extra-controls .input-group {
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
  /* Search Row Background */
 
  .search-row {
