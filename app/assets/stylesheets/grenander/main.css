@@ -132,3 +132,11 @@ li.nav-item a:hover {
 #searchLabel {
 	display: none;
 }
+
+
+/* Don't display mirador fullscreen on mobile (doesn't work) */
+@media only screen and (max-width: 576px){
+	.mirador-window-menu-btn {
+		display: none;
+	}
+}
