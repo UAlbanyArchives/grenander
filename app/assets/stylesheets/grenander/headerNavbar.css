@@ -142,7 +142,15 @@ span.glyphicon-triangle-top {
 	vertical-align: middle;
 }
 
-.navbar-inverse .navbar-nav > .show > a, .navbar-inverse .navbar-nav > .show > a:focus, .navbar-inverse .navbar-nav > .show > a:hover {
+/* BS4 selector */
+.navbar-inverse .navbar-nav > .show > a, .navbar-inverse .navbar-nav > .show > a:focus, .navbar-inverse .navbar-nav > .show > a:hover,
+/* BS5 selectors - dropdown and active states on nav-link */
+.navbar-inverse .navbar-nav .nav-link.show,
+.navbar-inverse .navbar-nav .nav-link.show:focus,
+.navbar-inverse .navbar-nav .nav-link.show:hover,
+.navbar-inverse .navbar-nav .nav-link.active,
+.navbar-inverse .navbar-nav .nav-link.active:focus,
+.navbar-inverse .navbar-nav .nav-link.active:hover {
 	background-color: #EBE6F0;
 	color: #403a60;
 }
@@ -171,6 +179,7 @@ span.glyphicon-triangle-top {
 	background-color: #EBE6F0;
 	top: 95%;
 	left: auto;
+	margin-top: 0;
 }
 
 #stickysearchBox { 

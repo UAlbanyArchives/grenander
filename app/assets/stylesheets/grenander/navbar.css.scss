@@ -49,7 +49,15 @@ body {
 	/*margin-bottom: 3px;*/
 }
 
-.navbar-dark .navbar-nav > .show > a, .navbar-dark .navbar-nav > .show > a:focus, .navbar-dark .navbar-nav > .show > a:hover {
+/* BS4 selector */
+.navbar-dark .navbar-nav > .show > a, .navbar-dark .navbar-nav > .show > a:focus, .navbar-dark .navbar-nav > .show > a:hover,
+/* BS5 selectors - dropdown and active states on nav-link */
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .nav-link.show:focus,
+.navbar-dark .navbar-nav .nav-link.show:hover,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.active:focus,
+.navbar-dark .navbar-nav .nav-link.active:hover {
 	background-color: #EBE6F0;
 	color: #403a60;
 }
@@ -82,6 +90,7 @@ body {
 	background-color: #EBE6F0;
 	top: 95%;
 	left: auto;
+	margin-top: 0;
 }
 
 /*.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
