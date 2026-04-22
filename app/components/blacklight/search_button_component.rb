@@ -3,7 +3,7 @@
 module Blacklight
   class SearchButtonComponent < Blacklight::Component
     def initialize(text:, id:)
-      @text = text
+      @text = text.presence || "Search"
       @id = id
     end
 

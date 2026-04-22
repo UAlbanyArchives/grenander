@@ -1,6 +1,6 @@
 <div class="d-flex align-items-center">
 	<div class="navbar navbar-expand-sm search-source flex-fill">
-		<div class="source-box container">
+		<div class="source-box container" role="search" aria-label="Search">
 			<h2 class="search-intro"><%= source_name %></h2>
 			<div class="flex-fill">
 				<%= render_search_bar(params: @params, q: @q, search_field: @search_field) %>

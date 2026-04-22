@@ -5,15 +5,17 @@ footer {
 	margin-top: 25px;
 }
 .spc-footer {
-    margin: 50px 0;
+   margin: 50px 0;
 	padding: 20px;
 	color: #EBE6F0;
 	font: 12pt "Roboto", Helvetica, Arial, sans-serif;
+	line-height: 1.5;
 }
 
 .spc-footer a {
-	color: #EBE6F0;
-	text-decoration: underline;
+	color: #EBE6F0 !important;
+	text-decoration: underline !important;
+	text-decoration-color: #EBE6F0 !important;;
 }
 
 .spc-footer a:hover {
