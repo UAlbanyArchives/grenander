@@ -24,6 +24,15 @@ article a:not(.btn):not(:where(.dropdown-menu *)) {
   text-decoration-color: #006c68;
 }
 
+.btn a,
+.nav-link,
+.dropdown-menu a,
+.card-title a,
+.card-header a,
+.card-body ul li a {
+  text-decoration: none !important;
+}
+
 .btn-info {
 	background-color: #006c68;
 }
