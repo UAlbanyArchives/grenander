@@ -18,39 +18,31 @@ gem 'grenander', git: 'https://github.com/UAlbanyArchives/grenander'
 config.full_width_layout = true
 ```
 
-3. Add templates to `app/views/layouts/blacklight/base.html.erb`
+3. Configure layout overrides.
+
+**Sprockets apps** must still copy `app/views/layouts/blacklight/base.html.erb` into the host app (the engine-provided version is not used by Sprockets apps). Apply the Grenander partials and the constraints placement fix manually:
 
 ```
-wget -O app/views/layouts/blacklight/base.html.erb https://github.com/projectblacklight/blacklight/blob/master/app/views/layouts/blacklight/base.html.erb
+wget -O app/views/layouts/blacklight/base.html.erb https://raw.githubusercontent.com/projectblacklight/blacklight/main/app/views/layouts/blacklight/base.html.erb
 ```
 
+Then edit the file:
+- Replace `<%= render blacklight_config.header_component.new(blacklight_config: blacklight_config) %>` with the Grenander navbar and search row partials
+- Remove the top-level `<%= content_for(:container_header) %>` from inside `<main>`
+- Also copy and edit `app/views/layouts/blacklight.html.erb` to yield `<%= content_for(:container_header) %>` at the top of `section#content` (both sidebar and no-sidebar branches)
+
+**Non-Sprockets apps** should not copy either layout file. Grenander owns the shared overrides in the engine:
 
 ```
-<body class="<%= render_body_class %>">
-    <nav id="skip-link" role="navigation" aria-label="<%= t('blacklight.skip_links.label') %>">
-      <%= link_to t('blacklight.skip_links.search_field'), '#search_field', class: 'element-invisible element-focusable rounded-bottom py-2 px-3', data: { turbolinks: 'false' } %>
-      <%= link_to t('blacklight.skip_links.main_content'), '#main-container', class: 'element-invisible element-focusable rounded-bottom py-2 px-3', data: { turbolinks: 'false' } %>
-      <%= content_for(:skip_links) %>
-    </nav>
-    
-    Remove or Comment --> <%= render partial: 'shared/header_navbar' %>
-    Here --> <%= render partial: 'layouts/grenander/navbar' %>
-    Here --> <%= render partial: 'grenander/search_row' %>
+app/views/layouts/blacklight.html.erb
+app/views/layouts/blacklight/base.html.erb
+```
 
-  <main id="main-container" class="<%= container_classes %>" role="main" aria-label="<%= t('blacklight.main.aria.main_container') %>">
-    <%= content_for(:container_header) %>
+If a non-Sprockets app already has local copies, remove them so the engine versions take effect:
 
-    <%= render partial: 'shared/flash_msg', layout: 'shared/flash_messages' %>
-
-    <div class="row">
-      <%= content_for?(:content) ? yield(:content) : yield %>
-    </div>
-  </main>
-
-  	Remove or comment -- > <%= render partial: 'shared/footer' %>
-    Here --> <%= render partial: 'layouts/grenander/footer' %> 
-    <%= render partial: 'shared/modal' %>
-  </body>
+```
+rm app/views/layouts/blacklight/base.html.erb
+rm app/views/layouts/blacklight.html.erb
 ```
 
 4. Require CSS in `app/assets/stylesheets/application.css`
@@ -69,9 +61,19 @@ wget -O app/views/layouts/blacklight/base.html.erb https://github.com/projectbla
 
 5. Require JS in `app/assets/javascripts/application.js`
 
+For Sprockets apps, use a require directive, not an ES module import:
+
+```
+//= require grenander/search_sources_menu
+```
+
+Do not put:
+
 ```
 import "grenander/search_sources_menu"
 ```
+
+inside `app/assets/javascripts/application.js`, because that file is evaluated by the asset pipeline as a classic script, not as a JavaScript module.
 
 6. Now needs a `render_search_bar` helper, such as:
 
