@@ -21,8 +21,7 @@ a:hover {
 p a:not(.btn):not(.nav-link):not(:where(.dropdown-menu *)),
 li a:not(.btn):not(.nav-link):not(:where(.dropdown-menu *)),
 td a:not(:where(.dropdown-menu *)),
-.card-text a:not(.btn):not(:where(.dropdown-menu *)),
-article a:not(.btn):not(:where(.dropdown-menu *)) {
+.card-text a:not(.btn):not(:where(.dropdown-menu *)) {
   color: #642a90;
   text-decoration: underline;
   text-decoration-color: #006c68;
